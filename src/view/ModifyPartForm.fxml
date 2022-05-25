@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyPartForm">
+    <children>
+        <VBox prefHeight="340.0" prefWidth="600.0">
+            <children>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="-Infinity" prefWidth="110.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="-Infinity" prefWidth="95.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="-Infinity" prefWidth="127.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="-Infinity" prefWidth="188.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Modify Part">
+                            <font>
+                                <Font name="Arial Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <RadioButton fx:id="MPartFInHouseRadioButton" mnemonicParsing="false" onAction="#MPartFInHouseRadioButtonAction" text="In-House" GridPane.columnIndex="1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="MPartFRBToggleGroup" />
+                     </toggleGroup></RadioButton>
+                        <RadioButton fx:id="OutsourcedRadioButton" mnemonicParsing="false" onAction="#MPartFOutsourcedRadioButtonAction" prefHeight="18.0" prefWidth="143.0" text="Outsourced" toggleGroup="$MPartFRBToggleGroup" GridPane.columnIndex="2" />
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="25.0" />
+                    </VBox.margin>
+                </GridPane>
+                <GridPane hgap="10.0" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="-Infinity" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="-Infinity" prefWidth="150.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="-Infinity" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="-Infinity" prefWidth="150.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="MPartFIdLabel" text="ID">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Name" GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Inv" GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Price/Cost" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label text="Max" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="MachIdToCompName" text="Machine ID" GridPane.rowIndex="5">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="MPartFIdField" disable="true" GridPane.columnIndex="1" />
+                        <TextField fx:id="MPartFNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="MPartFInvField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="MPartFPriceField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="MPartFMaxField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="MPartFMachIdField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Min" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets left="10.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="MPartFMinField" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                    </children>
+                </GridPane>
+                <HBox alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="460.0" spacing="12.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#MPartFSaveButtonAction" text="Save" />
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#MPartFCancelButtonAction" text="Cancel" />
+                    </children>
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+            <opaqueInsets>
+                <Insets top="100.0" />
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
