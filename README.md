@@ -1,5 +1,5 @@
 # Inventory_System
-C482 - Software 1, Java
+Software Development I - Java
 
 This program is an inventory management system built for a small manufacturing company.
 The goal of the project was to replace their current system of inventory tracking in a 
